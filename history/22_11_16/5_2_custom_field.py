@@ -11,3 +11,4 @@ Please select a fix:
 Select an option:
 """
 # ㄴ> 데이터베이스는 기존 행에 입력 시킬 데이터가 필요하기 때문. 2 선택!
+# ㄴ> non-nullable 필드인 "is_host"에 default 값이 없어서 user에 추가할 수 없다
