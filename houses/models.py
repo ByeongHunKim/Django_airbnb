@@ -17,6 +17,8 @@ class House(models.Model):
         default=True,
         help_text="Does this house allow pets?",
     )
+    # 5.5 foreign key
+    owner = models.ForeignKey("users.User", on_delete=models.CASCADE)
 
     # admin페이지에서 houses model의 name 컬럼이 렌더링 된다.
     def __str__(self):
