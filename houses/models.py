@@ -12,3 +12,7 @@ class House(models.Model):
     description = models.TextField()
     address = models.CharField(max_length=140)
     pets_allowed = models.BooleanField(default=True)
+
+    # admin페이지에서 houses model의 name 컬럼이 렌더링 된다.
+    def __str__(self):
+        return self.name
