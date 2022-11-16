@@ -11,7 +11,7 @@ class House(models.Model):
     # TextField는 유저가 길이가 긴 텍스트를 쓸 수 있게 해준다. 왜냐면 이것들은 데이터베이스에서 다른 방식으로 표현되기 때문
     description = models.TextField()
     address = models.CharField(max_length=140)
-    pets_allowed = models.BooleanField(default=True)
+    pets_allowed = models.BooleanField(verbose_name="Pets allow?", default=True, help_text="Does this house allow pets?")
 
     # admin페이지에서 houses model의 name 컬럼이 렌더링 된다.
     def __str__(self):
